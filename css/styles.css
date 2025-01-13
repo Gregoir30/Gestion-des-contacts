@@ -1,0 +1,337 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STYLE GLOBAL */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* BOUTONS */
+button, .btn {
+    display: inline-block;
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover, .btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* TABLEAU */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: #007BFF;
+    color: #fff;
+    font-weight: bold;
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background: #f4f4f4;
+}
+
+tbody tr:hover {
+    background: #f1f1f1;
+}
+
+tbody td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/* LIENS D'ACTION */
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.actions a {
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.actions a:hover {
+    color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+    }
+
+    tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Boutons action */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff;
+}
+
+.btn.-danger {
+    background-color: #dc3545;
+}
+
+.btn.-edit {
+    background-color: #ffc107;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Styles globaux */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: opacity 0.3s;
+}
+
+header nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* Section principale */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+
+/* Dégradé pour les boutons */
+.btn {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #0056b3, #003366);
+}
+
+/* Ombres pour les éléments interactifs */
+form, table, .actions {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header, footer {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Amélioration des styles pour le focus */
+a:focus, .btn:focus {
+    outline: 3px solid #0056b3; /* Mettre en évidence le focus pour les liens et boutons */
+}
+
+button:focus {
+    outline: 3px solid #0056b3;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination .first,
+.pagination .last {
+    font-weight: bold;
+}
+
+.pagination .prev, 
+.pagination .next {
+    font-weight: bold;
+}
