@@ -45,4 +45,4 @@ Le projet **Gestionnaire de Contacts** permet de gérer une liste de contacts. I
 1. **Cloner ce repository** :
 
    ```bash
-   git clone https://github.com/Gregoir30/gestion-de-contact.git
+   git clone git@github.com:Gregoir30/Gestion-des-contacts.git
